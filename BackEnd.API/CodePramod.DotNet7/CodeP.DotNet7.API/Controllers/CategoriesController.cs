@@ -1,6 +1,7 @@
 ﻿using CodeP.DotNet7.API.Data;
 using CodeP.DotNet7.API.Models.Domain;
 using CodeP.DotNet7.API.Models.DTO;
+using CodeP.DotNet7.API.Repositories.Interface;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System.Runtime.InteropServices;
@@ -11,11 +12,18 @@ namespace CodeP.DotNet7.API.Controllers
     [ApiController]
     public class CategoriesController : ControllerBase
     {
-        private readonly ApplicationDBContext context;
+        private readonly ICategoryRepository categoryRepository;
 
-        public CategoriesController(ApplicationDBContext context)
+        //private readonly ApplicationDBContext context;
+
+        //public CategoriesController(ApplicationDBContext context)
+        //{
+        //    this.context = context;
+        //}
+
+        public CategoriesController(ICategoryRepository categoryRepository)
         {
-            this.context = context;
+            this.categoryRepository = categoryRepository;
         }
         //
         [HttpPost]
@@ -28,8 +36,10 @@ namespace CodeP.DotNet7.API.Controllers
                 Name = request.Name,
                 UrlHandle = request.UrlHandle
             };
-            await context.Categories.AddAsync(category);
-            await context.SaveChangesAsync();
+
+            await categoryRepository.CreateAsync(category);
+            //await context.Categories.AddAsync(category);
+            //await context.SaveChangesAsync();
 
             //Dpmain Model to DTO
             var response = new CreateCategoryResponseDto

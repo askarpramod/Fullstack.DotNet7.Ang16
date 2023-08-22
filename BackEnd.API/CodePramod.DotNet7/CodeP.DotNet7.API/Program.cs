@@ -1,4 +1,6 @@
 using CodeP.DotNet7.API.Data;
+using CodeP.DotNet7.API.Repositories.Implementation;
+using CodeP.DotNet7.API.Repositories.Interface;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -14,6 +16,8 @@ builder.Services.AddDbContext<ApplicationDBContext>(options =>
 {
     options.UseSqlServer(builder.Configuration.GetConnectionString("DBConn"));
 });
+
+builder.Services.AddScoped<ICategoryRepository, CategoryRepository>();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
