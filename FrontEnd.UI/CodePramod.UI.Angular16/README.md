@@ -2,9 +2,43 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.1.8.
 
+## Command
+ng new CodePramod.UI.Angular16
+code .
+
+C:\CodeP\Fullstack.DotNet7.Ang16>git fetch
+C:\CodeP\Fullstack.DotNet7.Ang16>git pull
+
+
+C:\CodeP\Fullstack.DotNet7.Ang16>git status
+C:\CodeP\Fullstack.DotNet7.Ang16>git add .
+C:\CodeP\Fullstack.DotNet7.Ang16>git commit -m "Initial commit with Backend API working with EF Code First"
+
+Now it has been checked in to local repository, now we will push to remote repo
+C:\CodeP\Fullstack.DotNet7.Ang16>git push
+
+component : 
+C:\CodeP\Fullstack.DotNet7.Ang16\FrontEnd.UI\CodePramod.UI.Angular16\src\app\features\category> ng g c ca
+category-list
+
+Service :
+C:\CodeP\Fullstack.DotNet7.Ang16\FrontEnd.UI\CodePramod.UI.Angular16\src\app\features\services> ng g s 
+category
+
+http://localhost:4200/admin/categories/add
+
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+
+## Note
+http://localhost:4200/admin/categories/add
+
+https://localhost:7127/swagger/index.html
+https://localhost:7127/api/Categories
+
+Observable ko subscribe karna padta hai
 
 ## Code scaffolding
 

@@ -1,14 +1,29 @@
 # Overview
 Web application with Dot Net 7 and Angular 16 
 
+# command handy 
+
+C:\CodeP\Fullstack.DotNet7.Ang16>git fetch
+C:\CodeP\Fullstack.DotNet7.Ang16>git pull
+
+
+C:\CodeP\Fullstack.DotNet7.Ang16>git status
+C:\CodeP\Fullstack.DotNet7.Ang16>git add .
+C:\CodeP\Fullstack.DotNet7.Ang16>git commit -m "Initial commit with Backend API working with EF Code First"
+
+Now it has been checked in to local repository, now we will push to remote repo
+C:\CodeP\Fullstack.DotNet7.Ang16>git push
+
+PS C:\CodeP\Fullstack.DotNet7.Ang16\FrontEnd.UI\CodePramod.UI.Angular16> ng serve --open 
+
 
 ## Fullstack.DotNet7.Ang16
 [TODO] Add an overview of your project
 
 ###Request and Response
 
-#####  https://localhost:7127/swagger/index.html
-### Post to Creat Category : https://localhost:7127/api/Categories
+####  https://localhost:7127/swagger/index.html
+ Post to Creat Category : https://localhost:7127/api/Categories
 Req : {
   "name": "ASP Dot Net Core with Repo",
   "urlHandle": "DotNEtCoreWithRepository"
