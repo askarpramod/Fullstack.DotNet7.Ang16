@@ -1,7 +1,7 @@
 # Overview
 Web application with Dot Net 7 and Angular 16 
 
-# command handy 
+# Handy Commands  
 
 C:\CodeP\Fullstack.DotNet7.Ang16>git fetch
 C:\CodeP\Fullstack.DotNet7.Ang16>git pull
